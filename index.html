@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Praise &amp; Reks — Wedding Garden</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Outfit:wght@400;500;600&family=Pinyon+Script&display=block" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="c" aria-label="A garden patio path with flower arches and wedding chairs leading to a white gazebo above the ocean, with three easels: the couple's story, a photo gallery and the wedding invitation"></canvas>
+<div class="vig"></div>
+<div class="grain"></div>
+<main id="intro">
+  <h1><span>Praise</span><i>&amp;</i><span>Reks</span></h1>
+  <button id="go" type="button">Enter the garden</button>
+</main>
+<button id="snd" type="button" aria-label="Mute music" aria-pressed="false">
+  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path class="w" d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/><path class="x" d="M17 9l5 6M22 9l-5 6"/></svg>
+</button>
+<button id="skip" class="glass" type="button" aria-label="Skip the walk"><span>Skip</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 5l7 7-7 7"/><path d="M13 5l7 7-7 7"/></svg></button>
+<button id="cta-gallery" class="glass hang" type="button">Open Gallery</button>
+<button id="cta-story" class="glass hang" type="button">Read Full Story</button>
+<div id="hint" class="look-hint" aria-hidden="true">
+  <svg class="look-icon" width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M20.667 10.2946C19.8274 5.52834 17.8254 2.28625 15.5004 2.28625C12.4004 2.28625 9.89453 8.20209 9.89453 15.5C9.89453 22.7979 12.4004 28.7267 15.5004 28.7267C16.5724 28.7267 17.7349 27.9646 18.1612 26.7246" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M28.7268 15.5C28.7268 12.4 22.798 9.89417 15.5001 9.89417C8.20219 9.89417 2.27344 12.4 2.27344 15.5C2.27344 18.6 8.20219 21.1058 15.5001 21.1058C17.2439 21.1058 20.8089 21.1058 24.0897 19.6075" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M22.3852 24.4126L23.9352 21.713C24.5293 20.6538 24.8393 20.1242 24.6972 19.6076C24.5552 19.0909 24.0256 18.7938 22.9664 18.1867L20.2539 16.6367" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <span>Drag screen to look around</span>
+</div>
+<div id="end"><div class="row"><button id="seeinv" class="glass" type="button">See invitation</button><button id="again" type="button">Walk again</button></div></div>
+<div class="modal" id="story" role="dialog" aria-modal="true" aria-labelledby="story-t"><div class="sheet"><button class="close" type="button" aria-label="Close">&times;</button><div class="body"><h2 id="story-t">Our Story</h2><div id="storytext"></div></div></div></div>
+<div class="modal" id="gallery" role="dialog" aria-modal="true" aria-labelledby="gal-t"><div class="sheet wide"><button class="close" type="button" aria-label="Close">&times;</button><div class="body"><h2 id="gal-t">Our Gallery</h2><div id="galgrid" class="grid"></div></div></div></div>
+<script type="module" src="/script.js"></script>
+</body>
+</html>
